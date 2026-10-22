@@ -6,7 +6,7 @@ nav:
   - title: Home
     url: /
   - title: Documents
-    url: /Documents/
+    url: /documents/
 
 # Buttons in the footer
 footer_links:
