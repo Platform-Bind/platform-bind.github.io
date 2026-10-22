@@ -19,11 +19,14 @@
         </svg>
         <span>{{ site.title }}</span>
       </a>
-      <nav class="site-nav" aria-label="Main">
-        {% for item in site.nav %}
-          <a class="button{% if page.url == item.url %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% endfor %}
-      </nav>
+      <div class="header-text">
+        <p class="tagline">{{ site.description }}</p>
+        <nav class="site-nav" aria-label="Main">
+          {% for item in site.nav %}
+            <a class="button{% if page.url == item.url %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -39,7 +42,10 @@
         {% endfor %}
         <a class="button button-outline" href="#top">Back to top</a>
       </div>
-      <p class="footer-note">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      <p class="footer-note">
+        © {{ site.time | date: "%Y" }} {{ site.title }}.
+        Content is licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>.
+      </p>
     </div>
   </footer>
 </body>

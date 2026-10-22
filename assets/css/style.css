@@ -1,7 +1,7 @@
 :root {
-  --navy: #0d2340;
-  --navy-light: #1b3a63;
-  --on-navy: #ffffff;
+  --brand: #1f4fa8;
+  --brand-dark: #173d85;
+  --on-brand: #ffffff;
   --accent: #4f8fe0;
 
   --bg: #ffffff;
@@ -10,8 +10,8 @@
   --border: #dde2e8;
   --surface: #f4f6f9;
 
-  --radius: 999px;
-  --max-width: 52rem;
+  --radius: 0;
+  --max-width: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,7 +73,7 @@ body {
 .button {
   display: inline-block;
   padding: 0.45rem 1.1rem;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: var(--radius);
   font-size: 0.95rem;
   font-weight: 500;
@@ -99,34 +99,48 @@ body {
 /* Header */
 
 .site-header {
-  background: var(--navy);
-  color: var(--on-navy);
+  background: var(--brand);
+  color: var(--on-brand);
 }
 
 .header-inner {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  align-items: flex-end;
+  gap: 1.5rem 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .logo {
   display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--on-navy);
-  font-size: 1.2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--on-brand);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1;
   text-decoration: none;
 }
 
 .logo-mark {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: clamp(4rem, 8vw, 5.5rem);
+  height: clamp(4rem, 8vw, 5.5rem);
+}
+
+.header-text {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.tagline {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .site-nav {
@@ -136,15 +150,19 @@ body {
 }
 
 .site-nav .button {
-  color: var(--on-navy);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--on-brand);
 }
 
 .site-nav .button:hover {
-  background: var(--navy-light);
+  background: var(--brand-dark);
+  border-color: var(--on-brand);
 }
 
 .site-nav .button.is-active {
-  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--on-brand);
+  border-color: var(--on-brand);
+  color: var(--brand);
 }
 
 /* Main content */
@@ -229,4 +247,8 @@ body {
   margin: 1.25rem 0 0;
   color: var(--muted);
   font-size: 0.875rem;
+}
+
+.footer-note a {
+  color: inherit;
 }
