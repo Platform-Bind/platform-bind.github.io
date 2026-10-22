@@ -5,8 +5,8 @@ description: A curated collection of open and public sources
 nav:
   - title: Home
     url: /
-  - title: Test
-    url: /test/
+  - title: Documents
+    url: /Documents/
 
 # Buttons in the footer
 footer_links:
