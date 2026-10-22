@@ -1,0 +1,23 @@
+title: Platform Bind
+description: Platform Bind is coming soon.
+
+# Buttons in the header
+nav:
+  - title: Home
+    url: /
+  - title: Test
+    url: /test/
+
+# Buttons in the footer
+footer_links:
+  - title: GitHub
+    url: https://github.com/Platform-Bind
+
+exclude:
+  - LICENSE
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
