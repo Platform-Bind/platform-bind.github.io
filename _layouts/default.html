@@ -22,7 +22,7 @@
       </a>
       <nav class="site-nav" aria-label="Main">
         {% for item in site.nav %}
-          <a class="button" href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          <a class="button" href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% elsif item.url != "/" and page.url contains item.url %} aria-current="true"{% endif %}>{{ item.title }}</a>
         {% endfor %}
       </nav>
     </div>

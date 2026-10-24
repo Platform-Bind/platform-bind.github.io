@@ -162,7 +162,7 @@ a:focus-visible,
   border-color: var(--on-brand);
 }
 
-.site-nav .button[aria-current="page"] {
+.site-nav .button[aria-current] {
   background: var(--on-brand);
   border-color: var(--on-brand);
   color: var(--brand);
@@ -324,6 +324,100 @@ a:focus-visible,
   color: var(--muted);
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+/* Collection */
+
+.breadcrumb {
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.breadcrumb a::after {
+  content: " /";
+  color: var(--muted);
+}
+
+.prose .subcollections {
+  padding: 0;
+  list-style: none;
+}
+
+.prose .subcollections li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose .subcollections li + li {
+  margin-top: 0;
+}
+
+.prose .subcollections a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.prose .subcollections p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.prose .references {
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.prose .reference {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.prose .reference + .reference {
+  margin-top: 0;
+}
+
+.citation {
+  margin: 0 0 0.5rem;
+}
+
+.citation .year,
+.citation .source {
+  color: var(--muted);
+}
+
+.citation .ref-title {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.citation .source {
+  display: block;
+  font-size: 0.9375rem;
+  font-style: italic;
+}
+
+.annotation > :last-child {
+  margin-bottom: 0;
+}
+
+.abstract {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+.abstract summary {
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.abstract p {
+  margin: 0.5rem 0 0;
+}
+
+.empty {
+  color: var(--muted);
 }
 
 /* Footer */

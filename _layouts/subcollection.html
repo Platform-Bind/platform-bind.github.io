@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<p class="breadcrumb"><a href="{{ '/collection/' | relative_url }}">Curated collection</a></p>
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+{% assign references = site.data.zotero.collections[page.zotero_collection] %}
+{% if references and references.size > 0 %}
+<ol class="references">
+  {% for ref in references %}
+  <li class="reference" id="ref-{{ ref.key }}">
+    <p class="citation">
+      {% if ref.authors != "" %}<span class="authors">{{ ref.authors | escape }}</span>{% endif %}
+      {% if ref.year != "" %}<span class="year">({{ ref.year }})</span>{% endif %}
+      <cite class="ref-title">{% if ref.url != "" %}<a href="{{ ref.url | escape }}">{{ ref.title | escape }}</a>{% else %}{{ ref.title | escape }}{% endif %}</cite>
+      {% if ref.source != "" %}<span class="source">{{ ref.source | escape }}</span>{% endif %}
+    </p>
+    {% if ref.annotation != "" %}
+    <div class="annotation">{{ ref.annotation }}</div>
+    {% endif %}
+    {% if ref.abstract != "" %}
+    <details class="abstract">
+      <summary>Abstract</summary>
+      <p>{{ ref.abstract | escape | newline_to_br }}</p>
+    </details>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">No references have been added yet.</p>
+{% endif %}

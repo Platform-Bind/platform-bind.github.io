@@ -1,0 +1,20 @@
+{
+  "collections": {
+    "Projects": [],
+    "Research articles": [],
+    "Reports": [
+      {
+        "key": "9KIIY37H",
+        "type": "report",
+        "title": "Skiftende skydekke",
+        "authors": "Skate",
+        "year": "",
+        "source": "",
+        "url": "https://www.digdir.no/digitalisering-og-samordning/skiftende-skydekke/8337",
+        "abstract": "I norsk offentlig sektor har det de siste ti årene vært en sterk bevegelse i retning av å ta i bruk skytjenester. I lys av den usikre internasjonale politiske situasjonen har det imidlertid blitt stilt spørsmål ved norsk offentlig sektors endringsevne i bruken av skytjenester. Blant annet har Datatilsynet uttrykt bekymring for at offentlige virksomheter ikke er forberedt på en eventuell exit fra store IT-leverandører. Norsk offentlig sektor er i dag tett koblet til noen få leverandører som har sterke incentiver til å skape innlåsingseffekter, er underlagt andre lands jurisdiksjon, og kan påvirkes av interesser som ikke er forenlig med våre egne. Offentlige virksomheter bør ikke være avhengige av enkeltaktører for å levere tjenestene sine.",
+        "annotation": "<p>Test note</p>",
+        "tags": []
+      }
+    ]
+  }
+}
